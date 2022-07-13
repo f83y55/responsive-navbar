@@ -1,0 +1,80 @@
+:root {
+  /*WHITE*/
+  --white-bg-color: #fff;
+  --white-text-color: #000;
+ 
+  /*DARK*/
+  --dark-bg-color: #434343;
+  --dark-text-color: #fff;
+ 
+  /*RED*/
+  --red-bg-color: #ce8082;
+  --red-text-color: #020202;
+
+  --bg-color: #aaa;
+  --color: #eee;
+}
+ 
+[type="radio"] {
+  position: fixed;
+  display: none;
+}
+ 
+
+
+
+/*CUSTOM VARIABLES HERE*/
+ 
+[id="white"] ~ .page-wrapper [for="white"] {
+  background: var(--white-bg-color);
+}
+ 
+[id="dark"] ~ .page-wrapper [for="dark"] {
+  background: var(--dark-bg-color);
+}
+ 
+[id="red"] ~ .page-wrapper [for="red"] {
+  background: var(--red-bg-color);
+}
+ 
+.page-wrapper {
+  height: 35vh;
+  background: var(--bg-color);
+}
+ 
+.color-palette {
+  position: fixed;
+  top: 40vh;
+  right: 5vw;
+  display: grid;
+  grid-row-gap: 0.5rem;
+  padding: 0.5rem;
+  background: rgba(0, 0, 0, 0.4);
+}
+ 
+.color-palette label {
+  position: relative;
+  width: 1rem;
+  height: 1rem;
+}
+ 
+/*CUSTOM VARIABLES HERE*/
+ 
+ 
+[id="white"]:checked ~ .page-wrapper {
+  --color: var(--white-text-color);
+  --bg-color: var(--white-bg-color);
+}
+ 
+[id="dark"]:checked ~ .page-wrapper {
+  --color: var(--dark-text-color);
+  --bg-color: var(--dark-bg-color);
+}
+ 
+[id="red"]:checked ~ .page-wrapper {
+  --color: var(--red-text-color);
+  --bg-color: var(--red-bg-color);
+}
+ 
+ 
+
